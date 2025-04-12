@@ -34,8 +34,8 @@ const Contact = () => {
         <div id="contact" className="mt-5 py-5" style={{ backgroundColor: '#737171', color: 'black' }}>
             <h1 className="text-center">Get in touch</h1>
             <div className="d-sm-flex gap-5 m-4 justify-content-around ">
-                <div className='d-flex flex-column w-50 gap-2'>
-                    <h1 className=''>Let's talk</h1>
+                <div className='d-flex flex-column w-sm-50 gap-2'>
+                    <h1 className='text-center text-light'>Let's talk</h1>
                     <p>Open to exciting opportunities — ready to contribute and grow in a dynamic team or project.</p>
                     <div className="email text-black text-dark d-flex ">
                         <img src={mail} alt="" className="" />
