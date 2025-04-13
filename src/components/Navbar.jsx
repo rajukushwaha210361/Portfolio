@@ -18,7 +18,7 @@ const navbar = () => {
                             <li className="nav-item mx-4"><a className="nav-link" href="#about" onClick={()=>{setMenu("about")}}>About Me</a>{menu==='about'?<hr className="border-5 border-danger"/>:''}</li>
                             <li className="nav-item mx-4"><a className="nav-link" href="#service" onClick={()=>{setMenu("service")}}>Service</a>{menu==='service'?<hr className="border-5 border-danger"/>:''}</li>
                             <li className="nav-item mx-4"><a className="nav-link" href="#portfolio" onClick={()=>{setMenu("portfolio")}}>Projects</a>{menu==='portfolio'?<hr className="border-5 border-danger"/>:''}</li>
-                            <li className="nav-item mx-4 btn btn-secondary rounded-5 text-center h-25"><a className="nav-link" href="#contact" onClick={()=>{setMenu("contact")}}>Contact with me</a></li>
+                            <li className="nav-item mx-4 btn btn-secondary rounded-5 text-center h-25 con-nav"><a className="nav-link" href="#contact" onClick={()=>{setMenu("contact")}}>Contact with me</a></li>
                            
                         </ul>
                     </div>

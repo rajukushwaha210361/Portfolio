@@ -1,5 +1,5 @@
 import React from 'react'
-import profile from '../../src/assets/rajuportfolio1.png'
+import profile from '../../src/assets/raju.jpg'
 const About = () => {
     return (
 
@@ -20,7 +20,7 @@ const About = () => {
                         </div>
                         <div className="" >
                             <h1>My Skills</h1>
-                            <ul className="list-group list-unstyled mx-3" style={{ backgroundColor: '#c0bebe', color: 'black' }}>
+                            <ul className="list-group skill list-unstyled mx-3" style={{ backgroundColor: '#c0bebe', color: 'black' }}>
                                 <li className="list-group-item text-center border-2">HTML</li>
                                 <li className="list-group-item text-center border-2">CSS</li>
                                 <li className="list-group-item text-center border-2">JavaScript</li>
