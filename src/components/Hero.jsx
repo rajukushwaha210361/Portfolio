@@ -9,7 +9,7 @@ const Hero = () => {
 
         <>
             <div id='home' className="d-flex  flex-column  align-items-center justify-content-center py-5" style={{ backgroundColor: '#c0bebe', color: 'black' }} >
-                <img src={rajuprofile} alt="" className="rounded-circle" style={{ width: '200px', }} />
+                <img src={rajuprofile} alt="" className="rounded-circle" style={{ width: '300px', maxWidth: '100%' }} />
                 <div className="text-center mt-4">
                     <h1 ><span className=""> I'm Raju Kushwaha </span>,MERN <br /> Stack developer</h1>
                 </div>
