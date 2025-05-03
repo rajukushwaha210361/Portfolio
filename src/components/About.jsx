@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import profile from '../../src/assets/raju.jpg';
 
 const About = () => {
     const skills = [
@@ -13,62 +12,61 @@ const About = () => {
         { name: 'Nodejs', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
         { name: 'Expressjs', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
         { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
     ];
 
     return (
         <>
             <div id='about' className="d-flex flex-column align-items-center py-5 justify-content-center" style={{ background: 'linear-gradient(to right, #e0eafc, #cfdef3)', color: 'black' }}>
                 <div className="mb-4">
-                    <h1>About me</h1>
+                    <h1>About Me</h1>
                 </div>
 
                 <div className="d-sm-flex align-items-center gap-3 mt-3 justify-content-center mx-3">
-                   
-                    <div className="d-flex justify-content-center">
-                        <img className="mb-5 m-2 rounded-4" src={profile} alt="Profile" style={{ width: '300px' }} />
-                    </div>
-
-                 
                     <div>
-                        <p>
-                            I'm <strong>Raju Kushwaha</strong>, a MERN Stack Developer. I build modern, user-friendly websites using MongoDB, Express.js, React.js, and Node.js.
+                        <p className="p-3 fs-5">
+                            Hi, <strong>I'm Raju Kushwaha</strong>, a fresher web developer who loves building websites using the MERN stack (MongoDB, Express, React, Node.js).  
+                            I completed my B.Tech in Information Technology and worked on real projects during internships, like a Task Manager, Weather App, and an Airbnb-style website.  
+                            I enjoy coding, learning new skills, and solving problems. I’m looking for a good opportunity to grow as a developer and work with a great team.
                         </p>
 
-                        <div className="mt-4">
-                            <h2>My Skills</h2>
-                            <ul className="list-group skill list-unstyled mx-3 mt-3" style={{ backgroundColor: '#f5f7fa', borderRadius: '10px' }}>
-                                {skills.map((skill, index) => (
-                                    <SkillItem key={index} skill={skill} />
-                                ))}
-                            </ul>
+                        <div className="mt-5">
+                            <h2 className='text-center'>My Skills</h2>
+                            <div className="container mt-4">
+                                <div className="row justify-content-start">
+                                    {skills.map((skill, index) => (
+                                        <div key={index} className="col-4 col-md-3 d-flex justify-content-between">
+                                            <SkillItem skill={skill} />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
 
                     </div>
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
 const SkillItem = ({ skill }) => {
     const [imgError, setImgError] = useState(false);
 
     return (
-        <li
-            className="list-group-item d-flex align-items-center gap-3 border-2 shadow-sm my-2 "
-            style={{ backgroundColor: '#ffffff', borderRadius: '8px' }}
-        >
-            {!imgError && skill.icon && (
-                <img className="text-center mx-3 p-1"
-                    src={skill.icon}
-                    alt={skill.name}
-                    style={{ width: '30px', height: '30px' }}
-                    onError={() => setImgError(true)}
-                />
-            )}
-            <span className="text-center">{skill.name}</span>
-        </li>
+        <div className="card d-flex align-items-center gap- border-2 shadow-sm my-2 p-3" style={{ width: "23rem", height:'10rem' }}>
+            <img
+                className="text-center mx-3 p-1 rounded-4"
+                src={imgError ? 'https://via.placeholder.com/50' : skill.icon}
+                alt={skill.name}
+                onError={() => setImgError(true)}
+                style={{ width: '100px', height: '100px', objectFit: 'contain' }}
+            />
+            <div className="card-body p-2 text-center">
+                <p className="card-text" style={{ fontSize: '0.8rem' }}><strong> {skill.name}</strong> </p>
+            </div>
+        </div>
     );
-}
+};
 
 export default About;

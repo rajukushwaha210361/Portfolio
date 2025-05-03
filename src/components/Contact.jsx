@@ -48,7 +48,7 @@ const Contact = () => {
                         </a>
                     </div>
                     <div className="location d-flex justify-content-start gap-2 ">
-                        <img src={instgram} alt="" className="bg-white" style={{ width: '40px' }} />
+                       <img className="rounded-circle" src='https://i.pinimg.com/736x/8f/94/c6/8f94c616ec0a60bafb4de4e0260719da.jpg' alt="Instagram" style={{ width: '40px' }} />
                         <a className="text-black text-decoration-none btn" href="https://www.instagram.com/mr_rajukushwaha/">mr_rajukushwaha</a>
                     </div>
                     <div className="location d-flex justify-content-start gap-2 ">
